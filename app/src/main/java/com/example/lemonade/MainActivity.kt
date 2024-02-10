@@ -100,13 +100,13 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                                 currentStep = 2
                             }
                     )
-
                     Text(
                         text = "Tap the lemon tree to select a lemon",
                         fontSize = 20.sp,
                         modifier = modifier
                             .padding(15.dp)
                     )
+
                 }
             }
             2 -> {
@@ -115,7 +115,7 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxSize()
                 ){
-                    Text(text = "lemon_squeeze")
+//                    Text(text = "lemon_squeeze")
                     Spacer(modifier = Modifier.height(32
                         .dp))
                     Image(
@@ -136,6 +136,13 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                                 currentStep = 3
                             }
                     )
+                    Text(
+                        text = "Keep tapping the lemon to squeeze it",
+                        fontSize = 20.sp,
+                        modifier = modifier
+                            .padding(15.dp)
+                    )
+
                 }
             }
 
@@ -145,11 +152,11 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxSize()
                 ){
-                    Text(text = "lemon_squeeze")
+//                    Text(text = "lemon_squeeze")
                     Spacer(modifier = Modifier.height(32
                         .dp))
                     Image(
-                        painter = painterResource(R.drawable.lemon_squeeze),
+                        painter = painterResource(R.drawable.lemon_drink),
                         contentDescription = "lemon_tree_content_description",
                         modifier = Modifier
                             .wrapContentSize()
@@ -166,6 +173,12 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                                 currentStep = 4
                             }
                     )
+                    Text(
+                        text = "Tap the lemonade to drink it",
+                        fontSize = 20.sp,
+                        modifier = modifier
+                            .padding(15.dp)
+                    )
                 }
             }
             4 -> {
@@ -174,11 +187,11 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxSize()
                 ){
-                    Text(text = "lemon_squeeze")
+//                    Text(text = "lemon_squeeze")
                     Spacer(modifier = Modifier.height(32
                         .dp))
                     Image(
-                        painter = painterResource(R.drawable.lemon_squeeze),
+                        painter = painterResource(R.drawable.lemon_restart),
                         contentDescription = "lemon_tree_content_description",
                         modifier = Modifier
                             .wrapContentSize()
@@ -194,6 +207,12 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                             .clickable{
                                 currentStep = 1
                             }
+                    )
+                    Text(
+                        text = "Tap the empty glass to start again",
+                        fontSize = 20.sp,
+                        modifier = modifier
+                            .padding(15.dp)
                     )
                 }
             }
