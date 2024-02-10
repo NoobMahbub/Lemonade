@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Lemonade("Android")
+                    Lemonade()
                 }
             }
         }
@@ -62,7 +62,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Lemonade(name: String, modifier: Modifier = Modifier) {
+fun Lemonade(modifier: Modifier = Modifier) {
     // Current step the app is displaying (remember allows the state to be retained
     // across recompositions).
     var currentStep by remember { mutableIntStateOf(1) }
@@ -230,6 +230,6 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun LemonadePreview() {
     LemonadeTheme {
-        Lemonade("Android")
+        Lemonade()
     }
 }
