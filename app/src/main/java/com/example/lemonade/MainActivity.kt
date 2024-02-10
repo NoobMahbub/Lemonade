@@ -66,7 +66,7 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
     // A surface container using the 'background' color from the theme
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        color = MaterialTheme.colorScheme.surface
     ) {
         when (currentStep) {
             1 -> {
@@ -82,6 +82,9 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                         contentDescription = ("lemon_tree_content_description"),
                         modifier = Modifier
                             .wrapContentSize()
+                            .background(
+                                color = Color(0xFFC8E6C9)
+                            )
                             .clickable {
                                 currentStep = 2
                             }
@@ -100,9 +103,17 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                     Image(
                         painter = painterResource(R.drawable.lemon_squeeze),
                         contentDescription = "lemon_tree_content_description",
-                        modifier = Modifier.wrapContentSize()
+                        modifier = Modifier
+                            .wrapContentSize()
+                            .clickable{
+                                currentStep = 3
+                            }
                     )
                 }
+            }
+
+            3 -> {
+
             }
         }
     }
