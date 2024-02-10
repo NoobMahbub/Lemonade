@@ -86,7 +86,7 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                         contentDescription = ("lemon_tree_content_description"),
                         modifier = Modifier
                             .wrapContentSize()
-                            .clip(RoundedCornerShape(percent = 20))
+                             .clip(RoundedCornerShape(percent = 20))
                             .background(
                                 color = Color(0xFFC8E6C9)
                             )
@@ -95,6 +95,7 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                                 vertical = 15.dp,
 
                             )
+
                             .clickable {
                                 currentStep = 2
                             }
@@ -122,6 +123,15 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
                         contentDescription = "lemon_tree_content_description",
                         modifier = Modifier
                             .wrapContentSize()
+                             .clip(RoundedCornerShape(percent = 20))
+                            .background(
+                                color = Color(0xFFC8E6C9)
+                            )
+                            .padding(
+                                horizontal = 26.dp,
+                                vertical = 15.dp,
+
+                            )
                             .clickable{
                                 currentStep = 3
                             }
@@ -130,8 +140,65 @@ fun Lemonade(name: String, modifier: Modifier = Modifier) {
             }
 
             3 -> {
+                Column (
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center,
+                    modifier = Modifier.fillMaxSize()
+                ){
+                    Text(text = "lemon_squeeze")
+                    Spacer(modifier = Modifier.height(32
+                        .dp))
+                    Image(
+                        painter = painterResource(R.drawable.lemon_squeeze),
+                        contentDescription = "lemon_tree_content_description",
+                        modifier = Modifier
+                            .wrapContentSize()
+                             .clip(RoundedCornerShape(percent = 20))
+                            .background(
+                                color = Color(0xFFC8E6C9)
+                            )
+                            .padding(
+                                horizontal = 26.dp,
+                                vertical = 15.dp,
 
+                            )
+                            .clickable{
+                                currentStep = 4
+                            }
+                    )
+                }
             }
+            4 -> {
+                Column (
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center,
+                    modifier = Modifier.fillMaxSize()
+                ){
+                    Text(text = "lemon_squeeze")
+                    Spacer(modifier = Modifier.height(32
+                        .dp))
+                    Image(
+                        painter = painterResource(R.drawable.lemon_squeeze),
+                        contentDescription = "lemon_tree_content_description",
+                        modifier = Modifier
+                            .wrapContentSize()
+                             .clip(RoundedCornerShape(percent = 20))
+                            .background(
+                                color = Color(0xFFC8E6C9)
+                            )
+                            .padding(
+                                horizontal = 26.dp,
+                                vertical = 15.dp,
+
+                            )
+                            .clickable{
+                                currentStep = 1
+                            }
+                    )
+                }
+            }
+
+
         }
     }
 }
